@@ -1,0 +1,20 @@
+{
+  // Use IntelliSense para saber los atributos posibles.
+  // Mantenga el puntero para ver las descripciones de los existentes atributos.
+  // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: archivo actual",
+      "type": "python",
+      "request": "launch",
+      "program": "C:\\Users\\Danie\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\mlagents\\trainers\\learn.py",
+      "args": [
+        "--torch-device", "dml",
+        "--force"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}
