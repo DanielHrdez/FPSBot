@@ -7,11 +7,15 @@ using Unity.MLAgents.Sensors;
 
 public class FPSBot : Agent
 {
+    public string name;
     public float speed = 5f;
     public float turnSpeed = 180f;
     public FPSBot target;
-    public float maxDistance = 10f;
+    public float maxDistance = 5f;
     private Vector3 gunAimDirection = Vector3.forward;
+    private int countAim = 0;
+    private const int numSensors = 10;
+    public float angleSensor = 90f;
 
     public override void OnActionReceived(ActionBuffers vectorAction)
     {
@@ -28,46 +32,45 @@ public class FPSBot : Agent
         gunAimDirection.z = transform.forward.z;
         gunAimDirection.y = verticalTurnAmount;
 
-        // Rewards, kill target
-        if (shoot && KillTarget())
+        bool canKill = CanKill();
+
+        // // Rewards, kill target
+        if (shoot && canKill)
         {
-            target.Death();
-            SetReward(10f);
+            AddReward(100f);
             EndEpisode();
         }
         
-        // Rewards, see target
-        if (CanSeeTarget())
+        // Rewards based on angle to target
+        // float angle = Vector3.Angle(
+        //     transform.forward,
+        //     target.transform.localPosition - transform.localPosition
+        // );
+        // AddReward(1f - angle / 90f);
+        // if angle less than 5, reward 1, else reward -1
+        // if (angle < 10f)
+        if (CanKill())
         {
-            AddReward(.1f);
+            countAim++;
+            AddReward(1f);
+        }
+        else
+        {
+            countAim = 0;
         }
 
-        // Rewards, not see target, see and not shoot, not see and shoot
-        if ((!CanSeeTarget()) || (CanSeeTarget() && !shoot) || (!CanSeeTarget() && shoot))
+        // Rewards, can kill and not shoot, cant kill and shoot
+        if ((canKill && !shoot) || (!canKill && shoot))
         {
-            AddReward(-.1f);
+            AddReward(-1f);
         }
     }
 
-    public void Death()
-    {
-        SetReward(-10f);
-        EndEpisode();
-    }
-
-    // CanSeeTarget
-    private bool CanSeeTarget(float maxAngle = 30f)
-    {
-        Vector3 directionToTarget = target.transform.localPosition - transform.localPosition;
-        float angle = Vector3.Angle(transform.forward, directionToTarget);
-        return angle < maxAngle;
-    }
-
-    // KillTarget, if Raycast hit target, return true
-    private bool KillTarget()
+    // CanKill, if Raycast hit target, return true
+    private bool CanKill()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.localPosition, gunAimDirection, out hit))
+        if (Physics.Raycast(transform.position, gunAimDirection, out hit))
         {
             if (hit.collider.TryGetComponent<FPSBot>(out FPSBot bot))
             {
@@ -91,14 +94,52 @@ public class FPSBot : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        // Target and Agent loacl positions
-        sensor.AddObservation(target.transform.localPosition);
+        // Target and Agent local positions
         sensor.AddObservation(transform.localPosition);
+        sensor.AddObservation(target.transform.localPosition);
+        sensor.AddObservation(transform.forward);
+
+        // Add the raycast info (from current to target)
+        sensor.AddObservation(CanKill());
+
+        // Add the sensors info
+        float[] sensors = GetDistanceSensors();
+        for (int i = 0; i < numSensors; i++)
+        {
+            sensor.AddObservation(sensors[i]);
+        }
+    }
+
+    private float[] GetDistanceSensors()
+    {
+        float[] sensors = new float[numSensors];
+        for (int i = 0; i < numSensors; i++)
+        {
+            sensors[i] = GetDistanceSensor(i);
+        }
+        return sensors;
+    }
+
+    // Method to return the distance of sensor i
+    private float GetDistanceSensor(int i)
+    {
+        float angle = i * angleSensor / (numSensors - 1) - angleSensor / 2f;
+        Vector3 direction = Quaternion.AngleAxis(angle, Vector3.up) * transform.forward;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, direction, out hit))
+        {
+            return hit.distance;
+        }
+        return 100f;
     }
 
     public override void OnEpisodeBegin()
     {
-        // Reset target position in local range between -maxDistance and maxDistance
+        ResetLocation();
+    }
+
+    private void ResetLocation()
+    {
         target.transform.localPosition = new Vector3(
             Random.Range(-maxDistance, maxDistance),
             1f,
@@ -109,6 +150,6 @@ public class FPSBot : Agent
     private void Update()
     {
         // GunAimDirection debug ray
-        Debug.DrawRay(transform.localPosition, gunAimDirection * 10f, Color.red);
+        Debug.DrawRay(transform.position, gunAimDirection * 10f, Color.red);
     }
 }
