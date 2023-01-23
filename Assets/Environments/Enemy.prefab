@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1924419742288238371
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 618863940574197026, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 618863940574197026, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 618863940574197026, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_TagString
+      value: Team1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698525537436704274, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_SensorName
+      value: MapaTeam1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881674583958564019, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369171537647794246, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: team
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614353726181319776, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615098362511090591, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_SensorName
+      value: CameraSensorTeam1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383247234706162647, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529701947206461731, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192608362694545385, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690654961784403793, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709655546011645906, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionWallTeam1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195508321167376382, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 191
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264001820463845054, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c933b3181c9ba80498dbb7edf3d871cc, type: 2}
+    - target: {fileID: 8384379347461281362, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_SensorName
+      value: RayPerceptionTeam0Team1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8384379347461281362, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8384379347461281362, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_RayLayerMask.m_Bits
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 8384379347461281362, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_DetectableTags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8384379347461281362, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_DetectableTags.Array.data[0]
+      value: Team0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8384379347461281362, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: m_DetectableTags.Array.data[1]
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897364398141589464, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}
+      propertyPath: TeamId
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 844aefbfe817f4644a124a275bc4d35a, type: 3}

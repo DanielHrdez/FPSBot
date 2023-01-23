@@ -1,0 +1,30 @@
+{
+    "FPSBot": {
+        "elo": 1202.6843167767126,
+        "checkpoints": [
+            {
+                "steps": 63444,
+                "file_path": "results\\Test27\\FPSBot\\FPSBot-63444.onnx",
+                "reward": -3.451999771595001,
+                "creation_time": 1674419572.1724358,
+                "auxillary_file_paths": [
+                    "results\\Test27\\FPSBot\\FPSBot-63444.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 63444,
+            "file_path": "results\\Test27\\FPSBot.onnx",
+            "reward": -3.451999771595001,
+            "creation_time": 1674419572.1724358,
+            "auxillary_file_paths": [
+                "results\\Test27\\FPSBot\\FPSBot-63444.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "FPSBot": {
+        "checkpoints": [
+            {
+                "steps": 499966,
+                "file_path": "results\\Test16\\FPSBot\\FPSBot-499966.onnx",
+                "reward": -48.7652277729728,
+                "creation_time": 1674335486.4869816,
+                "auxillary_file_paths": [
+                    "results\\Test16\\FPSBot\\FPSBot-499966.pt"
+                ]
+            },
+            {
+                "steps": 553694,
+                "file_path": "results\\Test16\\FPSBot\\FPSBot-553694.onnx",
+                "reward": -284.20879367987317,
+                "creation_time": 1674335660.17694,
+                "auxillary_file_paths": [
+                    "results\\Test16\\FPSBot\\FPSBot-553694.pt"
+                ]
+            }
+        ],
+        "elo": 3430.2232083796166,
+        "final_checkpoint": {
+            "steps": 553694,
+            "file_path": "results\\Test16\\FPSBot.onnx",
+            "reward": -284.20879367987317,
+            "creation_time": 1674335660.17694,
+            "auxillary_file_paths": [
+                "results\\Test16\\FPSBot\\FPSBot-553694.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}

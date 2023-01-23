@@ -1,0 +1,66 @@
+{
+    "FPSBot": {
+        "checkpoints": [
+            {
+                "steps": 199974,
+                "file_path": "results\\Test25\\FPSBot\\FPSBot-199974.onnx",
+                "reward": 1.910272605491407,
+                "creation_time": 1674417112.9041102,
+                "auxillary_file_paths": [
+                    "results\\Test25\\FPSBot\\FPSBot-199974.pt"
+                ]
+            },
+            {
+                "steps": 399930,
+                "file_path": "results\\Test25\\FPSBot\\FPSBot-399930.onnx",
+                "reward": 15.886864217122396,
+                "creation_time": 1674417412.8702993,
+                "auxillary_file_paths": [
+                    "results\\Test25\\FPSBot\\FPSBot-399930.pt"
+                ]
+            },
+            {
+                "steps": 599268,
+                "file_path": "results\\Test25\\FPSBot\\FPSBot-599268.onnx",
+                "reward": null,
+                "creation_time": 1674417738.756793,
+                "auxillary_file_paths": [
+                    "results\\Test25\\FPSBot\\FPSBot-599268.pt"
+                ]
+            },
+            {
+                "steps": 799539,
+                "file_path": "results\\Test25\\FPSBot\\FPSBot-799539.onnx",
+                "reward": 1.6372666398684184,
+                "creation_time": 1674418070.3861718,
+                "auxillary_file_paths": [
+                    "results\\Test25\\FPSBot\\FPSBot-799539.pt"
+                ]
+            },
+            {
+                "steps": 939111,
+                "file_path": "results\\Test25\\FPSBot\\FPSBot-939111.onnx",
+                "reward": null,
+                "creation_time": 1674418287.8460426,
+                "auxillary_file_paths": [
+                    "results\\Test25\\FPSBot\\FPSBot-939111.pt"
+                ]
+            }
+        ],
+        "elo": 1209.7183928340914,
+        "final_checkpoint": {
+            "steps": 939111,
+            "file_path": "results\\Test25\\FPSBot.onnx",
+            "reward": null,
+            "creation_time": 1674418287.8460426,
+            "auxillary_file_paths": [
+                "results\\Test25\\FPSBot\\FPSBot-939111.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "FPSBot": {
+        "elo": 1205.1292285891066,
+        "checkpoints": [
+            {
+                "steps": 31497,
+                "file_path": "results\\Ray_Cam9\\FPSBot\\FPSBot-31497.onnx",
+                "reward": null,
+                "creation_time": 1674485069.021655,
+                "auxillary_file_paths": [
+                    "results\\Ray_Cam9\\FPSBot\\FPSBot-31497.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 31497,
+            "file_path": "results\\Ray_Cam9\\FPSBot.onnx",
+            "reward": null,
+            "creation_time": 1674485069.021655,
+            "auxillary_file_paths": [
+                "results\\Ray_Cam9\\FPSBot\\FPSBot-31497.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}

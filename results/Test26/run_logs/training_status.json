@@ -1,0 +1,57 @@
+{
+    "FPSBot": {
+        "checkpoints": [
+            {
+                "steps": 199986,
+                "file_path": "results\\Test26\\FPSBot\\FPSBot-199986.onnx",
+                "reward": -0.1888571113020509,
+                "creation_time": 1674418612.497084,
+                "auxillary_file_paths": [
+                    "results\\Test26\\FPSBot\\FPSBot-199986.pt"
+                ]
+            },
+            {
+                "steps": 399964,
+                "file_path": "results\\Test26\\FPSBot\\FPSBot-399964.onnx",
+                "reward": -0.36817647954996896,
+                "creation_time": 1674418933.0089924,
+                "auxillary_file_paths": [
+                    "results\\Test26\\FPSBot\\FPSBot-399964.pt"
+                ]
+            },
+            {
+                "steps": 599621,
+                "file_path": "results\\Test26\\FPSBot\\FPSBot-599621.onnx",
+                "reward": 1.7452700846904032,
+                "creation_time": 1674419246.974243,
+                "auxillary_file_paths": [
+                    "results\\Test26\\FPSBot\\FPSBot-599621.pt"
+                ]
+            },
+            {
+                "steps": 728274,
+                "file_path": "results\\Test26\\FPSBot\\FPSBot-728274.onnx",
+                "reward": -0.13692858070135117,
+                "creation_time": 1674419451.6546826,
+                "auxillary_file_paths": [
+                    "results\\Test26\\FPSBot\\FPSBot-728274.pt"
+                ]
+            }
+        ],
+        "elo": 1282.8613484526684,
+        "final_checkpoint": {
+            "steps": 728274,
+            "file_path": "results\\Test26\\FPSBot.onnx",
+            "reward": -0.13692858070135117,
+            "creation_time": 1674419451.6546826,
+            "auxillary_file_paths": [
+                "results\\Test26\\FPSBot\\FPSBot-728274.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}
